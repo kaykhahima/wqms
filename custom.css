@@ -1,0 +1,31 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-water-level {
+    background-color: var(--sl-color-success-400);
+}
+
+.card-temperature {
+    background-color: var(--sl-color-primary-400);
+}
+
+.card-humidity {
+    background-color: var(--sl-color-danger-400);
+}
+
+.card-ph {
+    background-color: var(--sl-color-warning-400);
+}
+
+.card-turbidity {
+    background-color: var(--sl-color-warning-800);
+}
+
+.card-salinity {
+    background-color: var(--sl-color-gray-400);
+}
+
+.card-electroconductivity {
+    background-color: var(--sl-color-success-800);
+}

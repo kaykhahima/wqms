@@ -57,7 +57,9 @@
 
         <ul class="nav py-2">
             <li class="nav-item">
-                <a class="nav-link active" href="./">WQMS</a>
+                <a class="navbar-brand" href="#">
+                    <img src="wqms.svg" width="50" height="50" alt=""> <span style="color: #4abaeb">WQMS</span>
+                </a>
             </li>
             <li class="nav-item ml-auto">
                 <sl-button type="primary" class="menu-btn">

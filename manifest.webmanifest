@@ -1,0 +1,32 @@
+// {
+//     "name": "Water Quality Monitoring System",
+//     "short_name": "WQMS",
+//     "lang": "en-US",
+//     "start_url": "/",
+//     "display": "standalone",
+//     "theme_color": "#38bdf8",
+//     "icons": [
+//         {
+//             "src": "wqms.png",
+//             "sizes": "512x512",
+//             "type": "image/png"
+//     }
+//   ]
+// }
+
+{
+  "name": "Water Quality Monitoring System",
+  "short_name": "WQMS",
+  "theme_color": "#38bdf8",
+  "background_color": "#38bdf8",
+  "display": "standalone",
+  "start_url": ".",
+  "icons": [
+    {
+      "src": "wqms.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}

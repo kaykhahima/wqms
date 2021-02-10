@@ -1,31 +1,48 @@
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2
 }
 
-.card-water-level {
-    background-color: var(--sl-color-success-400);
+.navbar-brand,
+.navbar-brand:hover {
+    color: var(--sl-color-black);
+    font-weight: 600
 }
 
-.card-temperature {
-    background-color: var(--sl-color-primary-400);
+.small-muted {
+    font-weight: var(--sl-font-weight-light);
+    font-size: var(--sl-font-size-x-small);
 }
 
-.card-humidity {
-    background-color: var(--sl-color-danger-400);
+.card {
+    border-radius: var(--sl-border-radius-x-large);
+    box-shadow: var(--sl-shadow-large);
 }
 
-.card-ph {
-    background-color: var(--sl-color-warning-400);
+.icon-button-color sl-icon-button::part(base) {
+    color: var(--sl-color-black);
 }
 
-.card-turbidity {
-    background-color: var(--sl-color-warning-800);
+.card-water-level sl-icon {
+    color: var(--sl-color-success-500);
 }
 
-.card-salinity {
-    background-color: var(--sl-color-gray-400);
+.card-temperature sl-icon {
+    color: var(--sl-color-danger-500);
 }
 
-.card-electroconductivity {
-    background-color: var(--sl-color-success-800);
+.card-humidity sl-icon {
+    color: var(--sl-color-primary-500);
+}
+
+.card-ph sl-icon {
+    color: var(--sl-color-warning-500);
+}
+
+.card-salinity sl-icon {
+    color: var(--sl-color-gray-500);
+}
+
+.card-turbidity sl-icon {
+    color: var(--sl-color-warning-900);
 }

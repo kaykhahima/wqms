@@ -36,7 +36,7 @@
 
 <body>
     <div class="container-fluid">
-        <sl-drawer label="Menu" class="menu-overview">
+        <sl-drawer label="Settings" class="menu-overview" placement="left">
             <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Active</a>
@@ -55,16 +55,18 @@
             <sl-button slot="footer" type="primary">Close</sl-button>
         </sl-drawer>
 
-        <ul class="nav py-2">
+        <ul class="nav py-3">
             <li class="nav-item">
-                <a class="navbar-brand" href="#">
-                    <img src="wqms.svg" width="50" height="50" alt=""> <span style="color: #4abaeb">WQMS</span>
+                <a class="navbar-brand" href="./">
+                    WQMS
                 </a>
+                <p class="small-muted">Water Quality Monitoring System</p>
+                <sl-menu-divider></sl-menu-divider>
             </li>
-            <li class="nav-item ml-auto">
-                <sl-button type="primary" class="menu-btn">
-                    <sl-icon name="three-dots-vertical"></sl-icon> MENU
-                </sl-button>
+            <li class="nav-item ml-auto icon-button-color">
+                <sl-tooltip content="Settings">
+                    <sl-icon-button name="gear-fill" label="Settings" class="h3 menu-btn"></sl-icon-button>
+                </sl-tooltip>
                 <script>
                     (() => {
                         const drawer = document.querySelector('.menu-overview');
@@ -83,57 +85,173 @@
             <p class="small mb-0">Welcome home</p>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-                <div class="card border-0 p-4 card-water-level text-white text-center mb-2">
+            <div class="col-md-3 col-6 card-water-level">
+                <sl-drawer placement="bottom" class="water-level-drawer-placement-bottom text-center">
+                    <sl-icon name="bar-chart-fill" class="h1"></sl-icon>
+                    <p class="card-title">Water level</p>
+                    <h3><strong>6250 cm</strong></h3>
+                    <div class="mx-auto pt-3">
+                        <sl-button slot="footer" type="default" class="mx-auto">Close</sl-button>
+                    </div>
+                </sl-drawer>
+                <div class="card border-0 text-center mb-2">
                     <div class="card-body">
-                        <h5 class="card-title">Water Level <sl-icon name="graph-up"></sl-icon>
-                        </h5>
-                        <sl-progress-ring percentage="75" size="200" class="progress-ring-labels h4" stroke-width="15" style="--indicator-color: #16a34a;">6250 cm</sl-progress-ring>
+                        <sl-icon name="bar-chart-fill" class="h1"></sl-icon>
+                        <p class="card-title">Water level</p>
+                        <h3><strong>6250 cm</strong></h3>
+                        <script>
+                            (() => {
+                                const drawer = document.querySelector('.water-level-drawer-placement-bottom');
+                                const openButton = drawer.nextElementSibling;
+                                const closeButton = drawer.querySelector('sl-button[type="default"]');
+
+                                openButton.addEventListener('click', () => drawer.show());
+                                closeButton.addEventListener('click', () => drawer.hide());
+                            })();
+
+                        </script>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-                <div class="card border-0 p-4 card-temperature text-white text-center mb-2">
+            <div class="col-md-3 col-6  card-temperature">
+                <sl-drawer placement="bottom" class=" card-temperature-drawer-placement-bottom text-center">
+                    <sl-icon name="thermometer-half" class="h1"></sl-icon>
+                    <p class="card-title">Temperature</p>
+                    <h3><strong>33.89&deg;C</strong></h3>
+                    <div class="mx-auto pt-3">
+                        <sl-button slot="footer" type="default" class="mx-auto">Close</sl-button>
+                    </div>
+                </sl-drawer>
+                <div class="card border-0 text-center mb-2">
                     <div class="card-body">
-                        <h5 class="card-title">Temperature <sl-icon name="thermometer-half"></sl-icon>
-                        </h5>
-                        <sl-progress-ring percentage="50" size="200" class="progress-ring-labels h4" stroke-width="15" style="--indicator-color: #0284c7;">33.89&deg;C</sl-progress-ring>
+                        <sl-icon name="thermometer-half" class="h1"></sl-icon>
+                        <p class="card-title">Temperature</p>
+                        <h3><strong>33.89&deg;C</strong></h3>
+                        <script>
+                            (() => {
+                                const drawer = document.querySelector('.card-temperature-drawer-placement-bottom');
+                                const openButton = drawer.nextElementSibling;
+                                const closeButton = drawer.querySelector('sl-button[type="default"]');
+
+                                openButton.addEventListener('click', () => drawer.show());
+                                closeButton.addEventListener('click', () => drawer.hide());
+                            })();
+
+                        </script>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-                <div class="card border-0 p-4 card-humidity text-white text-center mb-2">
+            <div class="col-md-3 col-6 card-humidity">
+                <sl-drawer placement="bottom" class=" card-humidity-drawer-placement-bottom text-center">
+                    <sl-icon name="droplet-fill" class="h1"></sl-icon>
+                    <p class="card-title"> Humidity
+                    <p>
+                    <h3><strong>75.02%</strong></h3>
+                    <div class="mx-auto pt-3">
+                        <sl-button slot="footer" type="default" class="mx-auto">Close</sl-button>
+                    </div>
+                </sl-drawer>
+                <div class="card border-0 text-center mb-2">
                     <div class="card-body">
-                        <h5 class="card-title">Humidity <sl-icon name="droplet"></sl-icon>
-                        </h5>
-                        <sl-progress-ring percentage="75" size="200" class="progress-ring-labels h4" stroke-width="15" style="--indicator-color: #ef4444;">75.02%</sl-progress-ring>
+                        <sl-icon name="droplet-fill" class="h1"></sl-icon>
+                        <p class="card-title"> Humidity
+                        <p>
+                        <h3><strong>75.02%</strong></h3>
+                        <script>
+                            (() => {
+                                const drawer = document.querySelector('.card-humidity-drawer-placement-bottom');
+                                const openButton = drawer.nextElementSibling;
+                                const closeButton = drawer.querySelector('sl-button[type="default"]');
+
+                                openButton.addEventListener('click', () => drawer.show());
+                                closeButton.addEventListener('click', () => drawer.hide());
+                            })();
+
+                        </script>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-                <div class="card border-0 p-4 card-ph text-white text-center mb-2">
+            <div class="col-md-3 col-6 card-ph">
+                <sl-drawer placement="bottom" class=" card-ph-drawer-placement-bottom text-center">
+                    <sl-icon name="clipboard-data" class="h1"></sl-icon>
+                    <p class="card-title">pH level</p>
+                    <h3><strong>6.75</strong></h3>
+                    <div class="mx-auto pt-3">
+                        <sl-button slot="footer" type="default" class="mx-auto">Close</sl-button>
+                    </div>
+                </sl-drawer>
+                <div class="card border-0 text-center mb-2">
                     <div class="card-body">
-                        <h5 class="card-title">pH level <sl-icon name="clipboard-data"></sl-icon>
-                        </h5>
-                        <sl-progress-ring percentage="75" size="200" class="progress-ring-labels h4" stroke-width="15" style="--indicator-color: #d97706;">6</sl-progress-ring>
+                        <sl-icon name="clipboard-data" class="h1"></sl-icon>
+                        <p class="card-title">pH level</p>
+                        <h3><strong>6.75</strong></h3>
+                        <script>
+                            (() => {
+                                const drawer = document.querySelector('.card-ph-drawer-placement-bottom');
+                                const openButton = drawer.nextElementSibling;
+                                const closeButton = drawer.querySelector('sl-button[type="default"]');
+
+                                openButton.addEventListener('click', () => drawer.show());
+                                closeButton.addEventListener('click', () => drawer.hide());
+                            })();
+
+                        </script>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-                <div class="card border-0 p-4 card-salinity text-white text-center mb-2">
+            <div class="col-md-3 col-6 card-salinity">
+                <sl-drawer placement="bottom" class=" card-salinity-drawer-placement-bottom text-center">
+                    <sl-icon name="droplet-half" class="h1"></sl-icon>
+                    <p class="card-title">Salinity</p>
+                    <h3><strong>4 ppm</strong></h3>
+                    <div class="mx-auto pt-3">
+                        <sl-button slot="footer" type="default" class="mx-auto">Close</sl-button>
+                    </div>
+                </sl-drawer>
+                <div class="card border-0 text-center mb-2">
                     <div class="card-body">
-                        <h5 class="card-title">Salinity <sl-icon name="droplet-half"></sl-icon>
-                        </h5>
-                        <sl-progress-ring percentage="75" size="200" class="progress-ring-labels h4" stroke-width="15" style="--indicator-color: #4b5563;">4 ppm</sl-progress-ring>
+                        <sl-icon name="droplet-half" class="h1"></sl-icon>
+                        <p class="card-title">Salinity</p>
+                        <h3><strong>4 ppm</strong></h3>
+                        <script>
+                            (() => {
+                                const drawer = document.querySelector('.card-salinity-drawer-placement-bottom');
+                                const openButton = drawer.nextElementSibling;
+                                const closeButton = drawer.querySelector('sl-button[type="default"]');
+
+                                openButton.addEventListener('click', () => drawer.show());
+                                closeButton.addEventListener('click', () => drawer.hide());
+                            })();
+
+                        </script>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-                <div class="card border-0 p-4 card-turbidity text-white text-center mb-2">
+            <div class="col-md-3 col-6 card-turbidity">
+                <sl-drawer placement="bottom" class=" card-turbidity-drawer-placement-bottom text-center">
+                    <sl-icon name="cloud-fill" class="h1"></sl-icon>
+                    <p class="card-title">Turbidity</p>
+                    <h3><strong>5 NTU</strong></h3>
+                    <div class="mx-auto pt-3">
+                        <sl-button slot="footer" type="default" class="mx-auto">Close</sl-button>
+                    </div>
+                </sl-drawer>
+                <div class="card border-0 text-center mb-2">
                     <div class="card-body">
-                        <h5 class="card-title">Turbidity <sl-icon name="cloud"></sl-icon>
-                        </h5>
-                        <sl-progress-ring percentage="50" size="200" class="progress-ring-labels h4" stroke-width="15" style="--indicator-color: #4d2201;">5 NTU</sl-progress-ring>
+                        <sl-icon name="cloud-fill" class="h1"></sl-icon>
+                        <p class="card-title">Turbidity</p>
+                        <h3><strong>5 NTU</strong></h3>
+                        <script>
+                            (() => {
+                                const drawer = document.querySelector('.card-turbidity-drawer-placement-bottom');
+                                const openButton = drawer.nextElementSibling;
+                                const closeButton = drawer.querySelector('sl-button[type="default"]');
+
+                                openButton.addEventListener('click', () => drawer.show());
+                                closeButton.addEventListener('click', () => drawer.hide());
+                            })();
+
+                        </script>
                     </div>
                 </div>
             </div>

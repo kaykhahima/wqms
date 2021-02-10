@@ -80,7 +80,7 @@
                 </script>
             </li>
         </ul>
-        <div class="jumbotron custom-jumbotron bg-white py-4">
+        <div class="jumbotron custom-jumbotron py-4">
             <h4><strong>Hello Kay,</strong></h4>
             <p class="small mb-0">Welcome home.</p>
         </div>

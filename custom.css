@@ -1,5 +1,5 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Arimo', sans-serif;
     background-color: #f2f2f2
 }
 
@@ -13,6 +13,16 @@ body {
     font-weight: var(--sl-font-weight-light);
     font-size: var(--sl-font-size-x-small);
     color: var(--sl-color-info-500);
+}
+
+.menu-overview .nav-link {
+    color: var(--sl-color-black);
+    padding: 1rem 0rem;
+    border-bottom: 1px solid var(--sl-color-gray-300);
+}
+
+.menu-overview sl-icon {
+    color: var(--sl-color-gray-500);
 }
 
 .card,

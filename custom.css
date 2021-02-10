@@ -25,6 +25,10 @@ body {
     color: var(--sl-color-gray-500);
 }
 
+.card-body {
+    padding: 1.25rem 0;
+}
+
 .card,
 .custom-jumbotron {
     border-radius: var(--sl-border-radius-x-large);

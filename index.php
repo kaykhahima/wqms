@@ -80,9 +80,9 @@
                 </script>
             </li>
         </ul>
-        <div class="jumbotron py-4">
-            <h4><strong>Hey Kay Khahima,</strong></h4>
-            <p class="small mb-0">Welcome home</p>
+        <div class="jumbotron custom-jumbotron bg-white py-4">
+            <h4><strong>Hello Kay,</strong></h4>
+            <p class="small mb-0">Welcome home.</p>
         </div>
         <div class="row">
             <div class="col-md-3 col-6 card-water-level">
@@ -154,8 +154,7 @@
                 <div class="card border-0 text-center mb-2">
                     <div class="card-body">
                         <sl-icon name="droplet-fill" class="h1"></sl-icon>
-                        <p class="card-title"> Humidity
-                        <p>
+                        <p class="card-title">Humidity</p>
                         <h3><strong>75.02%</strong></h3>
                         <script>
                             (() => {

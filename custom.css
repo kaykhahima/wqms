@@ -17,7 +17,7 @@ body {
 .card,
 .custom-jumbotron {
     border-radius: var(--sl-border-radius-x-large);
-    box-shadow: var(--sl-shadow-x-large);
+    box-shadow: var(--sl-shadow-large);
 }
 
 .custom-jumbotron {

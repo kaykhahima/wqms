@@ -54,7 +54,7 @@
 
     ?>
 
-    <div class="container-fluid">
+    <div class="container-fluid mb-5">
         <sl-drawer label="More" class="menu-overview" placement="left">
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -338,7 +338,6 @@
                                 const drawer = document.querySelector('.card-turbidity-drawer-placement-bottom');
                                 const openButton = drawer.nextElementSibling;
                                 const closeButton = drawer.querySelector('sl-button[type="default"]');
-
                                 openButton.addEventListener('click', () => drawer.show());
                                 closeButton.addEventListener('click', () => drawer.hide());
                             })();
@@ -348,12 +347,7 @@
                 </div>
             </div>
         </div>
-
-
-
-
     </div>
-
 </body>
 
 </html>

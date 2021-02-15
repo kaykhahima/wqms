@@ -36,6 +36,7 @@
 
 <body>
     <?php
+    $_SESSION['water-level'] = $_SESSION['temperature'] = $_SESSION['humidity'] = $_SESSION['ph'] =$_SESSION['salinity'] = $_SESSION['turbidity'] = "-x-";
     include ('includes/dbconfig.php');
 
     $reference = "";
@@ -192,6 +193,7 @@
                         <sl-icon name="bar-chart-fill" class="h1"></sl-icon>
                         <p class="card-title">Water level</p>
                         <h3><strong><?php echo $_SESSION['water-level']; ?> cm</strong></h3>
+                        <p class="card-title small-muted"><?php if($_SESSION['water-level'] < 10) {echo "(low)"; } else {echo "(high)";} ?></p>
                         <script>
                             (() => {
                                 const drawer = document.querySelector('.water-level-drawer-placement-bottom');
@@ -220,6 +222,7 @@
                         <sl-icon name="thermometer-half" class="h1"></sl-icon>
                         <p class="card-title">Temperature</p>
                         <h3><strong><?php echo $_SESSION['temperature']; ?>&deg;C</strong></h3>
+                        <p class="card-title small-muted"><?php if($_SESSION['temperature'] < 20) {echo "(low)"; } else if($_SESSION['temperature'] >= 20 && $_SESSION['temperature'] <= 22)  {echo "(moderate)"; } else {echo "(high)";} ?></p>
                         <script>
                             (() => {
                                 const drawer = document.querySelector('.card-temperature-drawer-placement-bottom');
@@ -249,6 +252,7 @@
                         <sl-icon name="droplet-fill" class="h1"></sl-icon>
                         <p class="card-title">Humidity</p>
                         <h3><strong><?php echo $_SESSION['humidity']; ?>%</strong></h3>
+                        <p class="card-title small-muted"><?php if($_SESSION['humidity'] < 40) {echo "(low)"; } else if($_SESSION['humidity'] >= 60 && $_SESSION['humidity'] <= 60)  {echo "(moderate)"; } else {echo "(high)";} ?></p>
                         <script>
                             (() => {
                                 const drawer = document.querySelector('.card-humidity-drawer-placement-bottom');
@@ -277,6 +281,7 @@
                         <sl-icon name="clipboard-data" class="h1"></sl-icon>
                         <p class="card-title">pH level</p>
                         <h3><strong><?php echo $_SESSION['ph']; ?></strong></h3>
+                        <p class="card-title small-muted"><?php if($_SESSION['ph'] < 7) {echo "(acidic)"; } else if($_SESSION['ph'] = 7)  {echo "(neutral)"; }  else {echo "(alkaline)";} ?></p>
                         <script>
                             (() => {
                                 const drawer = document.querySelector('.card-ph-drawer-placement-bottom');
@@ -305,6 +310,7 @@
                         <sl-icon name="droplet-half" class="h1"></sl-icon>
                         <p class="card-title">Salinity</p>
                         <h3><strong><?php echo $_SESSION['salinity']; ?> ppm</strong></h3>
+                        <p class="card-title small-muted"><?php if($_SESSION['salinity'] <= 5) {echo "(fresh water)"; } else if($_SESSION['salinity'] > 5 && $_SESSION['salinity'] <= 30)  {echo "(average salty water)"; } else {echo "(very salty)";} ?></p>
                         <script>
                             (() => {
                                 const drawer = document.querySelector('.card-salinity-drawer-placement-bottom');
@@ -333,6 +339,7 @@
                         <sl-icon name="cloud-fill" class="h1"></sl-icon>
                         <p class="card-title">Turbidity</p>
                         <h3><strong><?php echo $_SESSION['turbidity']; ?> NTU</strong></h3>
+                        <p class="card-title small-muted"><?php if($_SESSION['turbidity'] <= 3) {echo "(low)"; } else if($_SESSION['turbidity'] > 3 && $_SESSION['turbidity'] <= 5)  {echo "(moderate)"; } else {echo "(high)";} ?></p>
                         <script>
                             (() => {
                                 const drawer = document.querySelector('.card-turbidity-drawer-placement-bottom');

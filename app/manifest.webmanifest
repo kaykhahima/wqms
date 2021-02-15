@@ -1,5 +1,5 @@
 {
-  "name": "Water Quality Monitoring System",
+  "name": "WQMS",
   "short_name": "WQMS",
   "theme_color": "#38bdf8",
   "background_color": "#38bdf8",
@@ -374,6 +374,5 @@
       "src": "firefox/firefox-general-16-16.png",
       "sizes": "16x16"
     }
-  ],
-  "splash_pages": null
+  ]
 }

@@ -37,7 +37,6 @@
     <?php
     $_SESSION['water-level'] = $_SESSION['temperature'] = $_SESSION['humidity'] = $_SESSION['ph'] =$_SESSION['salinity'] = $_SESSION['turbidity'] = "-x-";
     include ('includes/dbconfig.php');
-
     $reference = "";
     $fetchdata = $database->getReference($reference)->getValue();
 
@@ -46,7 +45,7 @@
         $_SESSION['water-level'] = $row['level'];
         $_SESSION['temperature'] = $row['temperature'];
         $_SESSION['humidity'] = $row['humidity'];
-        $_SESSION['ph'] = $row['ph'];
+        $_SESSION['ph'] = round($row['ph'], 2);
         $_SESSION['salinity'] = $row['salinity'];
         $_SESSION['turbidity'] = $row['turbidity'];
     }

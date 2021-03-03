@@ -48,9 +48,18 @@
         $_SESSION['ph'] = round($row['ph'], 2);
         $_SESSION['salinity'] = $row['salinity'];
         $_SESSION['turbidity'] = $row['turbidity'];
+
+        if($_SESSION['ph'] < 7) {
+            $_SESSION['ph-status'] = "(acidic)";
+        }
+        else if($_SESSION['ph'] > 7) {
+            $_SESSION['ph-status'] = "(alkaline)";
+        }
+        else {
+            $_SESSION['ph-status'] = "(neutral)";
+        }
+
     }
-
-
     ?>
 
     <div class="container-fluid mb-5">
@@ -279,7 +288,7 @@
                         <sl-icon name="clipboard-data" class="h1"></sl-icon>
                         <p class="card-title">pH level</p>
                         <h3><strong><?php echo $_SESSION['ph']; ?></strong></h3>
-                        <p class="card-title small-muted"><?php if($_SESSION['ph'] < 7) {echo "(acidic)"; } else if($_SESSION['ph'] = 7)  {echo "(neutral)"; }  else {echo "(alkaline)";} ?></p>
+                        <p class="card-title small-muted"><?php echo $_SESSION['ph-status'];?></p>
                         <script>
                             (() => {
                                 const drawer = document.querySelector('.card-ph-drawer-placement-bottom');

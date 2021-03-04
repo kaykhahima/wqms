@@ -176,7 +176,7 @@
 
     ?>
 
-        <canvas id="chartjs-0" width="auto" height="auto"></canvas>
+        <canvas id="chartjs-0" width="100%" height="100%" class="graphical-data"></canvas>
         <script>
             new Chart(document.getElementById("chartjs-0"), {
                 "type": "line",

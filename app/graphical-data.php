@@ -35,7 +35,7 @@
 
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid graph-body">
         <sl-drawer label="More" class="menu-overview" placement="left">
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -176,7 +176,7 @@
 
     ?>
 
-        <canvas id="chartjs-0" width="100%" height="100%" class="graphical-data"></canvas>
+        <canvas id="chartjs-0" width="100%" height="150%" class="graphical-data"></canvas>
         <script>
             new Chart(document.getElementById("chartjs-0"), {
                 "type": "line",

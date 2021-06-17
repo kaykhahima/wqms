@@ -372,7 +372,8 @@
                 <sl-drawer placement="bottom" class=" card-e-conductivity-drawer-placement-bottom text-center">
                     <sl-icon name="lightning-fill" class="h1"></sl-icon>
                     <p class="card-title">Electro-conductivity</p>
-                    <h3><strong>-x- μS/cm</strong></h3>
+                    <h3><strong>-x-</strong></h3>
+                    <!--                    <h3><strong>-x- μS/cm</strong></h3>-->
                     <div class="mx-auto pt-3">
                         <sl-button slot="footer" type="default" class="mx-auto">Close</sl-button>
                     </div>
@@ -383,7 +384,7 @@
                         <p class="card-title">Electro-conductivity</p>
                         <h3><strong>-x-</strong></h3>
                         <!--                        <h3><strong>-x- μS/cm</strong></h3>-->
-                        <p class="card-title small-muted">-x-</p>
+                        <p class="card-title small-muted">-</p>
                         <script>
                             (() => {
                                 const drawer = document.querySelector('.card-e-conductivity-drawer-placement-bottom');
@@ -401,7 +402,8 @@
                 <sl-drawer placement="bottom" class=" card-dissolved-oxygen-drawer-placement-bottom text-center">
                     <sl-icon name="record-circle-fill" class="h1"></sl-icon>
                     <p class="card-title">Dissolved Oxygen</p>
-                    <h3><strong>-x- NTU</strong></h3>
+                    <h3><strong>-x-</strong></h3>
+                    <!--                    <h3><strong>-x- mg/L</strong></h3>-->
                     <div class="mx-auto pt-3">
                         <sl-button slot="footer" type="default" class="mx-auto">Close</sl-button>
                     </div>
@@ -412,7 +414,7 @@
                         <p class="card-title">Dissolved Oxygen</p>
                         <h3><strong>-x-</strong></h3>
                         <!--                        <h3><strong>-x- mg/L</strong></h3>-->
-                        <p class="card-title small-muted">-x-</p>
+                        <p class="card-title small-muted">-</p>
                         <script>
                             (() => {
                                 const drawer = document.querySelector('.card-dissolved-oxygen-drawer-placement-bottom');

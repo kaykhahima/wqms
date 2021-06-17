@@ -267,7 +267,7 @@
                         <sl-icon name="droplet-fill" class="h1"></sl-icon>
                         <p class="card-title">Humidity</p>
                         <h3><strong><?php echo $_SESSION['humidity']; ?>%</strong></h3>
-                        <p class="card-title small-muted"><?php if($_SESSION['humidity'] < 40) {echo "(low)"; } else if($_SESSION['humidity'] >= 60 && $_SESSION['humidity'] <= 60)  {echo "(moderate)"; } else {echo "(high)";} ?></p>
+                        <p class="card-title small-muted"><?php if($_SESSION['humidity'] < 40) {echo "(low)"; } else if($_SESSION['humidity'] >= 40 && $_SESSION['humidity'] <= 60)  {echo "(moderate)"; } else {echo "(high)";} ?></p>
                         <script>
                             (() => {
                                 const drawer = document.querySelector('.card-humidity-drawer-placement-bottom');
@@ -358,6 +358,64 @@
                         <script>
                             (() => {
                                 const drawer = document.querySelector('.card-turbidity-drawer-placement-bottom');
+                                const openButton = drawer.nextElementSibling;
+                                const closeButton = drawer.querySelector('sl-button[type="default"]');
+                                openButton.addEventListener('click', () => drawer.show());
+                                closeButton.addEventListener('click', () => drawer.hide());
+                            })();
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 card-e-conductivity">
+                <sl-drawer placement="bottom" class=" card-e-conductivity-drawer-placement-bottom text-center">
+                    <sl-icon name="lightning-fill" class="h1"></sl-icon>
+                    <p class="card-title">Electro-conductivity</p>
+                    <h3><strong>-x- μS/cm</strong></h3>
+                    <div class="mx-auto pt-3">
+                        <sl-button slot="footer" type="default" class="mx-auto">Close</sl-button>
+                    </div>
+                </sl-drawer>
+                <div class="card border-0 text-center mb-2">
+                    <div class="card-body">
+                        <sl-icon name="lightning-fill" class="h1"></sl-icon>
+                        <p class="card-title">Electro-conductivity</p>
+                        <h3><strong>-x-</strong></h3>
+                        <!--                        <h3><strong>-x- μS/cm</strong></h3>-->
+                        <p class="card-title small-muted">-x-</p>
+                        <script>
+                            (() => {
+                                const drawer = document.querySelector('.card-e-conductivity-drawer-placement-bottom');
+                                const openButton = drawer.nextElementSibling;
+                                const closeButton = drawer.querySelector('sl-button[type="default"]');
+                                openButton.addEventListener('click', () => drawer.show());
+                                closeButton.addEventListener('click', () => drawer.hide());
+                            })();
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 card-dissolved-oxygen">
+                <sl-drawer placement="bottom" class=" card-dissolved-oxygen-drawer-placement-bottom text-center">
+                    <sl-icon name="record-circle-fill" class="h1"></sl-icon>
+                    <p class="card-title">Dissolved Oxygen</p>
+                    <h3><strong>-x- NTU</strong></h3>
+                    <div class="mx-auto pt-3">
+                        <sl-button slot="footer" type="default" class="mx-auto">Close</sl-button>
+                    </div>
+                </sl-drawer>
+                <div class="card border-0 text-center mb-2">
+                    <div class="card-body">
+                        <sl-icon name="record-circle-fill" class="h1"></sl-icon>
+                        <p class="card-title">Dissolved Oxygen</p>
+                        <h3><strong>-x-</strong></h3>
+                        <!--                        <h3><strong>-x- mg/L</strong></h3>-->
+                        <p class="card-title small-muted">-x-</p>
+                        <script>
+                            (() => {
+                                const drawer = document.querySelector('.card-dissolved-oxygen-drawer-placement-bottom');
                                 const openButton = drawer.nextElementSibling;
                                 const closeButton = drawer.querySelector('sl-button[type="default"]');
                                 openButton.addEventListener('click', () => drawer.show());

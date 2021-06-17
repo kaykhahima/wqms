@@ -181,7 +181,11 @@
             new Chart(document.getElementById("chartjs-0"), {
                 "type": "line",
                 "data": {
-                    "labels": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+                    "labels": [<?php
+                                for ($x = 1; $x <= count($row); $x++) {
+                                  echo "$x"."," ;
+                                }
+                            ?>],
                     "datasets": [{
                             "label": "Water level",
                             "data": [<?php foreach ($waterLevel as $levelValue) { echo $levelValue, ","; }?>],

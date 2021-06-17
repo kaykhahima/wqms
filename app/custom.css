@@ -74,6 +74,14 @@ body {
     color: var(--sl-color-warning-900);
 }
 
+.card-e-conductivity sl-icon {
+    color: var(--sl-color-primary-950);
+}
+
+.card-dissolved-oxygen sl-icon {
+    color: var(--sl-color-primary-500);
+}
+
 @media (max-width: 768px) {
     h3 {
         font-size: 1.17em;

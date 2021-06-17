@@ -78,7 +78,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://mega.nz/file/E8BX0AAC#U9mlVwQf7WiBRti8b9z2Xuoac-2pEV_uQRZb8RnOxMc" target="_blank">
+                    <a class="nav-link" href="https://firebasestorage.googleapis.com/v0/b/wqms-e26bc.appspot.com/o/wqms%20v1.1.apk?alt=media&token=4f4c66df-803b-46fc-bba0-4f1644fc4102" target="_blank">
                         <sl-icon name="phone" class=""></sl-icon> Mobile App
                     </a>
                 </li>
@@ -197,7 +197,7 @@
 
         <sl-alert type="primary" open closable class="alert-closable my-2">
             <sl-icon slot="icon" name="info-circle"></sl-icon>
-            <a class="nav-link" href="https://mega.nz/file/E8BX0AAC#U9mlVwQf7WiBRti8b9z2Xuoac-2pEV_uQRZb8RnOxMc" target="_blank"> Download Mobile app here.</a>
+            <span class="confirm-download" style="cursor:pointer;"> Download Mobile app here.</span>
         </sl-alert>
 
         <script>
@@ -207,6 +207,29 @@
             });
 
         </script>
+
+
+        <sl-dialog class="dialog-overview text-center">
+            <sl-avatar image="https://firebasestorage.googleapis.com/v0/b/wqms-e26bc.appspot.com/o/app-logo.png?alt=media&token=21982970-6510-4d24-9752-71696070b373" alt="App logo"></sl-avatar>
+            <h4 class="">Download APK</h4>
+            <p class="small-muted">You are about to download an APK from this site. Download now?</p>
+            <div class="pt-3">
+                <sl-button slot="footer" type="primary" class="mx-auto" href="https://firebasestorage.googleapis.com/v0/b/wqms-e26bc.appspot.com/o/wqms%20v1.1.apk?alt=media&token=4f4c66df-803b-46fc-bba0-4f1644fc4102">Download
+                    <sl-icon slot="suffix" name="download"></sl-icon>
+                </sl-button>
+            </div>
+        </sl-dialog>
+
+        <script>
+            const dialog = document.querySelector('.dialog-overview');
+            const openButton = document.querySelector('.confirm-download');
+            const closeButton = dialog.querySelector('sl-button[slot="footer"]');
+
+            openButton.addEventListener('click', () => dialog.show());
+            closeButton.addEventListener('click', () => dialog.hide());
+
+        </script>
+
         <div class="jumbotron custom-jumbotron bg-gray py-4">
             <h4><strong><?php date_default_timezone_set('Africa/Dar_es_Salaam'); echo date("H:i");?></strong><span class="small-muted text-white">Hrs</span></h4>
             <p class="small mb-0"><?php echo date("l, M j"); ?></p>

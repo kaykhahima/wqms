@@ -78,6 +78,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="https://mega.nz/file/E8BX0AAC#U9mlVwQf7WiBRti8b9z2Xuoac-2pEV_uQRZb8RnOxMc" target="_blank">
+                        <sl-icon name="phone" class=""></sl-icon> Mobile App
+                    </a>
+                </li>
+                <li class="nav-item">
                     <sl-dialog label="Team" class="team-dialog-overview">
                         <p class="small"><abbr title="Bachelor of Computer Engineering 2018">BENG 18 COE</abbr></p>
                         <sl-menu>
@@ -189,6 +194,19 @@
                 </script>
             </li>
         </ul>
+
+        <sl-alert type="primary" open closable class="alert-closable my-2">
+            <sl-icon slot="icon" name="info-circle"></sl-icon>
+            <a class="nav-link" href="https://mega.nz/file/E8BX0AAC#U9mlVwQf7WiBRti8b9z2Xuoac-2pEV_uQRZb8RnOxMc" target="_blank"> Download Mobile app here.</a>
+        </sl-alert>
+
+        <script>
+            const alert = document.querySelector('.alert-closable');
+            alert.addEventListener('sl-after-hide', () => {
+                setTimeout(() => alert.open = true, 2000);
+            });
+
+        </script>
         <div class="jumbotron custom-jumbotron bg-gray py-4">
             <h4><strong><?php date_default_timezone_set('Africa/Dar_es_Salaam'); echo date("H:i");?></strong><span class="small-muted text-white">Hrs</span></h4>
             <p class="small mb-0"><?php echo date("l, M j"); ?></p>

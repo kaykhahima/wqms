@@ -210,7 +210,7 @@
 
 
         <sl-dialog class="dialog-overview text-center">
-            <sl-avatar image="https://firebasestorage.googleapis.com/v0/b/wqms-e26bc.appspot.com/o/app-logo.png?alt=media&token=21982970-6510-4d24-9752-71696070b373" alt="App logo"></sl-avatar>
+            <sl-avatar image="https://firebasestorage.googleapis.com/v0/b/wqms-e26bc.appspot.com/o/app-logo.png?alt=media&token=21982970-6510-4d24-9752-71696070b373" alt="App logo" shape="circle" class="mb-2"></sl-avatar>
             <h4 class="">Download APK</h4>
             <p class="small-muted">You are about to download an APK from this site. Download now?</p>
             <div class="pt-3">
@@ -412,7 +412,7 @@
             <div class="col-md-3 col-6 card-e-conductivity">
                 <sl-drawer placement="bottom" class=" card-e-conductivity-drawer-placement-bottom text-center">
                     <sl-icon name="lightning-fill" class="h1"></sl-icon>
-                    <p class="card-title">Electro-conductivity</p>
+                    <p class="card-title">Conductivity</p>
                     <h3><strong>-x-</strong></h3>
                     <!--                    <h3><strong>-x- μS/cm</strong></h3>-->
                     <div class="mx-auto pt-3">
@@ -422,7 +422,7 @@
                 <div class="card border-0 text-center mb-2">
                     <div class="card-body">
                         <sl-icon name="lightning-fill" class="h1"></sl-icon>
-                        <p class="card-title">Electro-conductivity</p>
+                        <p class="card-title">Conductivity</p>
                         <h3><strong>-x-</strong></h3>
                         <!--                        <h3><strong>-x- μS/cm</strong></h3>-->
                         <p class="card-title small-muted">-</p>
